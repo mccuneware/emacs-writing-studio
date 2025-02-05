@@ -116,7 +116,7 @@
   (modus-themes-italic-constructs t)
   (modus-themes-bold-constructs t)
   (modus-themes-mixed-fonts t)
-  (modus-themes-to-toggle '(modus-operandi-tinted modus-vivendi-tinted))
+  (modus-themes-to-toggle '(modus-vivendi modus-operandi-tinted modus-vivendi-tinted))
   :bind
   (("C-c w t t" . modus-themes-toggle)
    ("C-c w t m" . modus-themes-select)
@@ -752,3 +752,25 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((dot . t))) ; this line activates GraophViz dot
+
+;; McC
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(modus-vivendi))
+ '(custom-safe-themes
+   '("2e7dc2838b7941ab9cabaa3b6793286e5134f583c04bde2fba2f4e20f2617cf7" default))
+ '(menu-bar-mode nil)
+ '(package-selected-packages
+   '(auto-dark ox-epub markdown-mode fountain-mode lorem-ipsum titlecase writegood-mode powerthesaurus undo-tree olivetti denote-explore citar-denote consult-notes consult denote openwith emms org-web-tools elfeed-org elfeed citar biblio nov org-modern org-fragtog org-appear helpful which-key marginalia orderless vertico balanced-windows mixed-pitch ef-themes modus-themes spacious-padding))
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Menlo" :foundry "nil" :slant normal :weight regular :height 180 :width normal))))
+ '(org-default ((t (:inherit default :height 2.0)))))
