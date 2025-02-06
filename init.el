@@ -36,6 +36,9 @@
 (when (< emacs-major-version 29)
   (error "Emacs Writing Studio requires Emacs version 29 or later"))
 
+(when (eq system-type 'darwin)
+  (setq insert-directory-program "/opt/homebrew/bin/gls"))
+
 ;; Custom settings in a separate file and load the custom settings
 
 (setq-default custom-file (expand-file-name "custom.el" user-emacs-directory))
